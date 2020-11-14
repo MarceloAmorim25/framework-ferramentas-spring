@@ -21,7 +21,7 @@ Esse documento é um compilado do material de apoio, documentação e stack over
 9. Open Api 3.0 (antigo Swagger)
 10. Knative
 
-O Knative aqui mais pra facilitar mesmo a parte do Kubernetes
+obs.: O Knative aqui mais pra facilitar mesmo a parte do Kubernetes
 
 
 ### 1 - Prometheus
@@ -48,7 +48,7 @@ Documentação: https://grafana.com/docs/grafana/latest/
 Documentação: https://kafka.apache.org/documentation/
 
 
-3.1. pom.xml
+#### 3.1. pom.xml
 
 ```
 
@@ -61,7 +61,7 @@ Documentação: https://kafka.apache.org/documentation/
 ```
 
 
-3.2 application.properties
+#### 3.2 application.properties
 
 
 ```
@@ -76,7 +76,7 @@ spring.kafka.topic.transactions=${KAFKA_TOPIC:transacoes}
 ```
 
 
-3.3 classe de configurações na API
+#### 3.3 classe de configurações na API
 
 
 
@@ -137,7 +137,7 @@ public class ConfiguracoesKafka {
 
 ```
 
-3.4. Criar uma classe para consumir as mensagens do Kafka Producer
+#### 3.4. Criar uma classe para consumir as mensagens do Kafka Producer
 
 ```
 
@@ -158,11 +158,9 @@ public class ConfiguracoesKafka {
 
 Documentação: https://www.vaultproject.io/docs
 
-
 Integrando ao projeto:
 
-
-4.1. adicionar a dependência no pom.xml
+#### 4.1. adicionar a dependência no pom.xml
 
 
 ```
@@ -177,7 +175,7 @@ Integrando ao projeto:
 
 ```
 
-4.2. criar um arquivo bootstrap.yml
+#### 4.2. criar um arquivo bootstrap.yml
 
 
 ```
@@ -198,7 +196,7 @@ spring:
 - o token veio definido no docker-compose.yml
 
 
-4.3. definir o segredo no nosso cofre, o vault.
+#### 4.3. definir o segredo no nosso cofre, o vault.
 
 - Um exemplo seria:
 
@@ -210,7 +208,7 @@ spring:
 > vault kv put secret/fatura DB_USERNAME=keycloak DB_PASSWORD=password
 
 
-4.4. variáveis de ambiente na nossa API
+#### 4.4. variáveis de ambiente na nossa API
 
 - O DB_USERNAME e DB_PASSWORD estarão como variáveis de ambiente 
 lá no application properties, assim:
@@ -233,7 +231,7 @@ Documentação: https://www.jaegertracing.io/docs/1.20/
 http://localhost:16686
 
 
-5.1. Application.properties
+#### 5.1. Application.properties
 
 ```
 
@@ -247,7 +245,7 @@ opentracing.jaeger.udp-sender.port=${JAEGGER_PORT:5775}
 Documentação: https://docs.docker.com/get-started/
 
 
-6.1. Criar Dockerfile:
+#### 6.1. Criar Dockerfile:
 
 ```
 
@@ -268,7 +266,7 @@ ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
 
 ```
 
-6.2. construir o container
+#### 6.2. construir o container
 
 > docker build -t bootcamp/proposta .
 
@@ -282,7 +280,7 @@ ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
 Documentação: https://www.keycloak.org/documentation
 
 
-8.1 Application.properties
+#### 8.1 Application.properties
 
 
 ```
@@ -302,7 +300,7 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 ### 9 - Open Api 3.0
 
 
-9.1. pom.xml
+#### 9.1. pom.xml
 
 
 ```
@@ -315,13 +313,14 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 ```
 
 
-9.2. application.properties
+#### 9.2. application.properties
 
 
 ```
 
 # open api 3 doc
 springdoc.swagger-ui.path=/swagger-ui.html
+
 
 ```
 
