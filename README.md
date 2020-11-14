@@ -1,8 +1,6 @@
 # Dicas para o Desafio 3: proposta, transação e fatura.
 
-
-	Esse documento é um compilado do material de apoio, documentação e stack 
-over flow. A ideia desse repositório foi economizar tempo nessa parte de configurações (principalmente nos assuntos que fazem maior intersecção com o setup de infraestrutura) e deixar mais tempo pro código. Aqui no README está um tutorial rápido de como colocar todas essas ferramentas no projeto. O ponto aqui não é aprofundar, é só conectar esse ferramental com o projeto e deixar funcionando. Nos arquivos de cada ferramenta, deixei algumas features extras que achei interessantes.
+Esse documento é um compilado do material de apoio, documentação e stack over flow. A ideia desse repositório foi economizar tempo nessa parte de configurações (principalmente nos assuntos que fazem maior intersecção com o setup de infraestrutura) e deixar mais tempo pro código. Aqui no README está um tutorial rápido de como colocar todas essas ferramentas no projeto. O ponto aqui não é aprofundar, é só conectar esse ferramental com o projeto e deixar funcionando. Nos arquivos de cada ferramenta, deixei algumas features extras que achei interessantes.
 
 
 ### PRINCIPAL
