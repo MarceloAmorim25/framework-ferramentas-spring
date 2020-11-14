@@ -1,26 +1,27 @@
 # Dicas para o Desafio 3: proposta, transação e fatura.
 
+
 Esse documento é um compilado do material de apoio, documentação e stack over flow. A ideia desse repositório foi economizar tempo nessa parte de configurações (principalmente nos assuntos que fazem maior intersecção com o setup de infraestrutura) e deixar mais tempo pro código. Aqui no README está um tutorial rápido de como colocar todas essas ferramentas no projeto. O ponto aqui não é aprofundar, é só conectar esse ferramental com o projeto e deixar funcionando. Nos arquivos de cada ferramenta, deixei algumas features extras que achei interessantes.
 
 
 ### PRINCIPAL
 
-1 - Prometheus
-2 - Grafana
-3 - Kafka
-4 - Vault
-5 - Jaeger
-6 - Docker 
-7 - Kubernetes
-8 - Keycloak
+1. Prometheus
+2. Grafana
+3. Kafka
+4. Vault
+5. Jaeger
+6. Docker 
+7. Kubernetes
+8. Keycloak
 
 
 ### EXTRA
 
-9 - Open Api 3.0 (antigo Swagger)
-10 - Knative
+9. Open Api 3.0 (antigo Swagger)
+10. Knative
 
-- O Knative aqui mais pra facilitar mesmo a parte do Kubernetes
+O Knative aqui mais pra facilitar mesmo a parte do Kubernetes
 
 
 ### 1 - Prometheus
@@ -326,3 +327,24 @@ springdoc.swagger-ui.path=/swagger-ui.html
 
 
 ### 10 - Knative
+
+
+
+## Referências
+
+
+- https://github.com/zup-academy/documentacao-cartao-branco
+
+- https://www.keycloak.org/documentation
+
+- https://docs.docker.com/get-started/
+
+- https://www.jaegertracing.io/docs/1.20/
+
+- https://www.vaultproject.io/docs
+
+- https://kafka.apache.org/documentation/ 
+
+- https://grafana.com/docs/grafana/latest/
+
+- https://prometheus.io/ 
