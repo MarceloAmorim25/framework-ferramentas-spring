@@ -8,9 +8,9 @@ Este repositório não é uma criação nem invenção nova. É apenas um resumo
 Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 
 
-### PRIMEIRA PARTE
+### FERRAMENTAS E TWELVE FACTORS APP
 
-1. Prometheus
+[1. prometheus](#prometheus)
 2. Grafana
 3. Kafka
 4. Vault
@@ -18,16 +18,15 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 6. Docker 
 7. Kubernetes
 8. Keycloak
-
-### SEGUNDA PARTE
-
 9. Open Api 3.0 (antigo Swagger)
 10. Knative
 11. Logs
 12. Variáveis de Ambiente no Application Properties
 13. Pitest
 
-### 1 - Prometheus
+
+
+### Prometheus
 
 Documentação: https://prometheus.io/
 localhost:9090/targets
@@ -423,8 +422,6 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 
 ```
 
-## SEGUNDA PARTE
-
 
 ### 9 - Open Api 3.0
 
@@ -456,11 +453,60 @@ springdoc.swagger-ui.path=/swagger-ui.html
 
 ### 10 - Knative
 
+
+- https://knative.dev/docs/serving/samples/hello-world/helloworld-java-spring/
+
+
 ### 11 - Twelve Factors - Logs
+
+
+```
+
+private final Logger logger = LoggerFactory.getLogger(Aviso.class);
+
+logger.info("Aviso devidamente registrado e pode ser identificado pelo número {}", novoAviso.getId());
+
+
+```
 
 ### 12 - Twelve Factors - Variáveis de Ambiente no Application Properties
 
+
+```
+
+spring.application.name=${API_NOME:proposta}
+
+API_NOME: env
+proposta: valor default
+
+
+```
+
 ### 13 - Pitest
+
+
+Documentação: https://pitest.org/quickstart/maven/
+
+
+#### pom.xml
+
+
+```
+
+<plugin>
+    <groupId>org.pitest</groupId>
+    <artifactId>pitest-maven</artifactId>
+    <version>LATEST</version>
+ </plugin>
+
+
+```
+
+#### bash
+
+
+> mvn org.pitest:pitest-maven:mutationCoverage
+
 
 ## Referências
 
