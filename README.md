@@ -10,36 +10,36 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 
 ### FERRAMENTAS E TWELVE FACTORS APP
 
-[1. Prometheus](#1.-prometheus)
+[1. Prometheus](#1-prometheus)
 
-[2. Grafana](#2.-grafana)
+[2. Grafana](#2-grafana)
 
-[3. Kafka](#3.-kafka)
+[3. Kafka](#3-kafka)
 
-[4. Vault](#4.-vault)
+[4. Vault](#4-vault)
 
-[5. Jaeger](#5.-jaeger)
+[5. Jaeger](#5-jaeger)
 
-[6. Docker](#6.-docker)
+[6. Docker](#6-docker)
 
-[7. Kubernetes](#7.-kubernetes)
+[7. Kubernetes](#7-kubernetes)
 
-[8. Keycloak](#8.-keycloak)
+[8. Keycloak](#8-keycloak)
 
-[9. Open Api 3.0](#9.-open-api-3)
+[9. Open Api 3.0](#9-open-api-3)
 
-[10. Knative](#10.-knative)
+[10. Knative](#10-knative)
 
-[11. Logs](#11.-logs)
+[11. Logs](#11-logs)
 
-[12. Variáveis de Ambiente no Application Properties](#12.-envs)
+[12. Variáveis de Ambiente no Application Properties](#12-envs)
 
-[13. Pitest](#13.-pitest)
+[13. Pitest](#13-pitest)
 
-[14. Referências](#14.-referências)
+[14. Referências](#14-referências)
 
 
-### 1. Prometheus
+### 1 Prometheus
 
 Documentação: https://prometheus.io/
 
@@ -94,7 +94,7 @@ Para colocar o arquivo de configurações dentro do container:
 Observação: não sei ao certo se era essa a saída mais fácil para configurar o prometheus in container, mas foi a única que consegui pensar até agora.
 
 
-### 2. Grafana
+### 2 Grafana
 
 Documentação: https://grafana.com/docs/grafana/latest/
 
@@ -112,7 +112,7 @@ https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao
 
 - mais detalhes: Grafana.md
 
-### 3. Kafka
+### 3 Kafka
 
 Documentação: https://kafka.apache.org/documentation/
 
@@ -276,7 +276,7 @@ public class RecebeTransacao {
 ```
 
 
-### 4. Vault
+### 4 Vault
 
 Documentação: https://www.vaultproject.io/docs
 
@@ -348,7 +348,7 @@ spring.datasource.password=${DB_PASSWORD}
 Pronto, agora o Vault já está funcionando.
 
 
-### 5. Jaeger
+### 5 Jaeger
 
 referência material de apoio:
 
@@ -368,7 +368,7 @@ opentracing.jaeger.udp-sender.port=${JAEGGER_PORT:5775}
 
 ```
 
-### 6. Docker 
+### 6 Docker 
 
 Documentação: https://docs.docker.com/get-started/
 
@@ -399,11 +399,11 @@ ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
 > docker build -t bootcamp/proposta .
 
 
-### 7. Kubernetes
+### 7 Kubernetes
 
 
 
-### 8. Keycloak
+### 8 Keycloak
 
 Documentação: https://www.keycloak.org/documentation
 
@@ -464,7 +464,7 @@ spring.security.oauth2.resourceserver.jwt.jwk-set-uri=${KEYCLOAK_JWKS_URI:http:/
 ```
 
 
-### 9. Open Api 3
+### 9 Open Api 3
 
 
 #### 9.1. pom.xml
@@ -492,13 +492,13 @@ springdoc.swagger-ui.path=/swagger-ui.html
 ```
 
 
-### 10. Knative
+### 10 Knative
 
 
 - https://knative.dev/docs/serving/samples/hello-world/helloworld-java-spring/
 
 
-### 11. Logs
+### 11 Logs
 
 Logs - Twelve Factors App
 
@@ -512,7 +512,7 @@ logger.info("Aviso devidamente registrado e pode ser identificado pelo número {
 
 ```
 
-### 12. Envs
+### 12 Envs
 
 Variáveis de Ambiente - Twelve Factors App
 
@@ -526,7 +526,7 @@ proposta: valor default
 
 ```
 
-### 13. Pitest
+### 13 Pitest
 
 
 Documentação: https://pitest.org/quickstart/maven/
@@ -552,7 +552,7 @@ Documentação: https://pitest.org/quickstart/maven/
 > mvn org.pitest:pitest-maven:mutationCoverage
 
 
-## 14. Referências
+## 14 Referências
 
 
 - https://github.com/zup-academy/documentacao-cartao-branco
