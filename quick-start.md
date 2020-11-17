@@ -10,20 +10,20 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 
 ### FERRAMENTAS E TWELVE FACTORS APP
 
-[1. prometheus](#prometheus)
-2. Grafana
-3. Kafka
-4. Vault
-5. Jaeger
-6. Docker 
-7. Kubernetes
-8. Keycloak
-9. Open Api 3.0 (antigo Swagger)
-10. Knative
-11. Logs
-12. Variáveis de Ambiente no Application Properties
-13. Pitest
-
+[1. Prometheus](#prometheus)
+[2. Grafana](#grafana)
+[3. Kafka](#kafka)
+[4. Vault](#vault)
+[5. Jaeger](#jaeger)
+[6. Docker](#docker)
+[7. Kubernetes](#kubernetes)
+[8. Keycloak](#keycloak)
+[9. Open Api 3.0](#open-api-3)
+[10. Knative](#knative)
+[11. Logs](#logs)
+[12. Variáveis de Ambiente no Application Properties](#envs)
+[13. Pitest](#pitest)
+[14. Referências](#referências)
 
 
 ### Prometheus
@@ -61,7 +61,7 @@ scrape_configs:
 ```
 
 
-### 2 - Grafana
+### Grafana
 
 Documentação: https://grafana.com/docs/grafana/latest/
 
@@ -75,7 +75,7 @@ Documentação: https://grafana.com/docs/grafana/latest/
 
 - mais detalhes: Grafana.md
 
-### 3 - Kafka
+### Kafka
 
 Documentação: https://kafka.apache.org/documentation/
 
@@ -236,7 +236,7 @@ public class RecebeTransacao {
 ```
 
 
-### 4 - Vault
+### Vault
 
 Documentação: https://www.vaultproject.io/docs
 
@@ -305,7 +305,7 @@ spring.datasource.password=${DB_PASSWORD}
 Pronto, agora o Vault já está funcionando.
 
 
-### 5 - Jaeger
+### Jaeger
 
 referência material de apoio:
 
@@ -325,7 +325,7 @@ opentracing.jaeger.udp-sender.port=${JAEGGER_PORT:5775}
 
 ```
 
-### 6 - Docker - criar container
+### Docker 
 
 Documentação: https://docs.docker.com/get-started/
 
@@ -356,11 +356,11 @@ ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
 > docker build -t bootcamp/proposta .
 
 
-### 7 - Kubernetes
+### Kubernetes
 
 
 
-### 8 - Keycloak
+### Keycloak
 
 Documentação: https://www.keycloak.org/documentation
 
@@ -423,7 +423,7 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 ```
 
 
-### 9 - Open Api 3.0
+### Open Api 3
 
 
 #### 9.1. pom.xml
@@ -451,13 +451,13 @@ springdoc.swagger-ui.path=/swagger-ui.html
 ```
 
 
-### 10 - Knative
+### Knative
 
 
 - https://knative.dev/docs/serving/samples/hello-world/helloworld-java-spring/
 
 
-### 11 - Twelve Factors - Logs
+### Logs
 
 
 ```
@@ -469,7 +469,7 @@ logger.info("Aviso devidamente registrado e pode ser identificado pelo número {
 
 ```
 
-### 12 - Twelve Factors - Variáveis de Ambiente no Application Properties
+### Envs
 
 
 ```
@@ -482,7 +482,7 @@ proposta: valor default
 
 ```
 
-### 13 - Pitest
+### Pitest
 
 
 Documentação: https://pitest.org/quickstart/maven/
