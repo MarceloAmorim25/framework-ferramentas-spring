@@ -1,4 +1,4 @@
-# Ferramentas para colocar num projeto Spring
+# Ferramentas e elementos para colocar num projeto Spring
 
 
 Esse documento é um compilado do material de apoio, documentação e stack over flow.Aqui no README está um tutorial rápido de como colocar todas essas ferramentas no projeto. O ponto aqui não é aprofundar, é só conectar esse ferramental com o projeto e deixar funcionando. Nos arquivos de cada ferramenta, deixei algumas features extras que achei interessantes. Funciona como um quick start para colocar essas ferramentas numa API desenvolvida com Spring.
@@ -8,7 +8,7 @@ Este repositório não é uma criação nem invenção nova. É apenas um resumo
 Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 
 
-### PRINCIPAL
+### PRIMEIRA PARTE
 
 1. Prometheus
 2. Grafana
@@ -19,14 +19,13 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 7. Kubernetes
 8. Keycloak
 
-
-### EXTRA
+### SEGUNDA PARTE
 
 9. Open Api 3.0 (antigo Swagger)
 10. Knative
-
-obs.: O Knative aqui mais pra facilitar mesmo a parte do Kubernetes
-
+11. Logs
+12. Variáveis de Ambiente no Application Properties
+13. Pitest
 
 ### 1 - Prometheus
 
@@ -34,6 +33,7 @@ Documentação: https://prometheus.io/
 localhost:9090/targets
 Iniciar prometheus => arquivo prometheus.yaml
 Documentação -> acrescentei apenas o localhost:8080
+
 
 ```
 
@@ -74,6 +74,7 @@ Documentação: https://grafana.com/docs/grafana/latest/
 
 - criar dashboard e definir datasource (localhost:9090) -> prometheus
 
+- mais detalhes: Grafana.md
 
 ### 3 - Kafka
 
@@ -169,7 +170,57 @@ public class ConfiguracoesKafka {
 
 ```
 
-#### 3.4. Criar uma classe para consumir as mensagens do Kafka Producer
+
+#### 3.4 Exemplo de como pode ficar a classe RecebeTransacao
+
+
+
+```
+
+public class RecebeTransacao {
+
+
+    @NotBlank
+    private String id;
+
+    @NotNull
+    private BigDecimal valor;
+
+    @NotBlank
+    private String efetivadaEm;
+
+    @NotNull
+    private CartaoDto cartao;
+
+    @NotNull
+    private Estabelecimento estabelecimento;
+
+
+    @Deprecated
+    public RecebeTransacao(){}
+
+    public RecebeTransacao(@NotBlank String id, @NotNull BigDecimal valor, @NotBlank String efetivadaEm,
+                           @NotNull CartaoDto cartao, @NotNull Estabelecimento estabelecimento) {
+        this.id = id;
+        this.valor = valor;
+        this.efetivadaEm = efetivadaEm;
+        this.cartao = cartao;
+        this.estabelecimento = estabelecimento;
+    }
+
+    public Transacao toModel(Cartao cartaoRecebido, Fatura fatura){
+        return new Transacao(id, valor, efetivadaEm, cartaoRecebido, estabelecimento, fatura);
+    }
+
+
+    //getters e setters
+
+}
+
+
+```
+
+#### 3.5. Criar uma classe para consumir as mensagens do Kafka Producer
 
 ```
 
@@ -257,6 +308,9 @@ Pronto, agora o Vault já está funcionando.
 
 ### 5 - Jaeger
 
+referência material de apoio:
+
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_suporte/jaeger.md
 
 Documentação: https://www.jaegertracing.io/docs/1.20/
 
@@ -314,11 +368,48 @@ Documentação: https://www.keycloak.org/documentation
 
 #### 8.1 Criar Realm
 
+referência material de apoio:
+
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_suporte/keycloak-realm.md
+
 #### 8.2 Criar Client
+
+referência material de apoio:
+
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_suporte/keycloak-client.md
+
 
 #### 8.3 Criar User
 
-#### 8.4 Application.properties
+referência material de apoio:
+
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_suporte/keycloak-user.md
+
+
+#### 8.4 pom.xml
+
+
+```
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+</dependency>
+
+
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-oauth2-jose</artifactId>
+</dependency>
+
+
+```
+
+#### 8.5 Application.properties
+
+referência material de apoio:
+
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_suporte/oauth-spring-security.md
 
 
 ```
@@ -332,7 +423,7 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 
 ```
 
-## EXTRA
+## SEGUNDA PARTE
 
 
 ### 9 - Open Api 3.0
@@ -365,7 +456,11 @@ springdoc.swagger-ui.path=/swagger-ui.html
 
 ### 10 - Knative
 
+### 11 - Twelve Factors - Logs
 
+### 12 - Twelve Factors - Variáveis de Ambiente no Application Properties
+
+### 13 - Pitest
 
 ## Referências
 
