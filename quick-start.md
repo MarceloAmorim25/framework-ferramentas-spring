@@ -11,18 +11,31 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 ### FERRAMENTAS E TWELVE FACTORS APP
 
 [1. Prometheus](#prometheus)
+
 [2. Grafana](#grafana)
+
 [3. Kafka](#kafka)
+
 [4. Vault](#vault)
+
 [5. Jaeger](#jaeger)
+
 [6. Docker](#docker)
+
 [7. Kubernetes](#kubernetes)
+
 [8. Keycloak](#keycloak)
+
 [9. Open Api 3.0](#open-api-3)
+
 [10. Knative](#knative)
+
 [11. Logs](#logs)
+
 [12. Variáveis de Ambiente no Application Properties](#envs)
+
 [13. Pitest](#pitest)
+
 [14. Referências](#referências)
 
 
