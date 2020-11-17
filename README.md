@@ -10,40 +10,43 @@ Referência principal: https://github.com/zup-academy/documentacao-cartao-branco
 
 ### FERRAMENTAS E TWELVE FACTORS APP
 
-[1. Prometheus](#prometheus)
+[1. Prometheus](#1.prometheus)
 
-[2. Grafana](#grafana)
+[2. Grafana](#2.grafana)
 
-[3. Kafka](#kafka)
+[3. Kafka](#3.kafka)
 
-[4. Vault](#vault)
+[4. Vault](#4.vault)
 
-[5. Jaeger](#jaeger)
+[5. Jaeger](#5.jaeger)
 
-[6. Docker](#docker)
+[6. Docker](#6.docker)
 
-[7. Kubernetes](#kubernetes)
+[7. Kubernetes](#7.kubernetes)
 
-[8. Keycloak](#keycloak)
+[8. Keycloak](#8.keycloak)
 
-[9. Open Api 3.0](#open-api-3)
+[9. Open Api 3.0](#9.open-api-3)
 
-[10. Knative](#knative)
+[10. Knative](#10.knative)
 
-[11. Logs](#logs)
+[11. Logs](#11.logs)
 
-[12. Variáveis de Ambiente no Application Properties](#envs)
+[12. Variáveis de Ambiente no Application Properties](#12.envs)
 
-[13. Pitest](#pitest)
+[13. Pitest](#13.pitest)
 
-[14. Referências](#referências)
+[14. Referências](#14.referências)
 
 
-### Prometheus
+### 1.Prometheus
 
 Documentação: https://prometheus.io/
+
 localhost:9090/targets
+
 Iniciar prometheus => arquivo prometheus.yaml
+
 Documentação -> acrescentei apenas o localhost:8080
 
 
@@ -74,9 +77,13 @@ scrape_configs:
 ```
 
 
-### Grafana
+### 2.Grafana
 
 Documentação: https://grafana.com/docs/grafana/latest/
+
+material de apoio:
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_procedural/acessando_grafana.md
+
 
 - localhost:3000
 
@@ -88,9 +95,12 @@ Documentação: https://grafana.com/docs/grafana/latest/
 
 - mais detalhes: Grafana.md
 
-### Kafka
+### 3.Kafka
 
 Documentação: https://kafka.apache.org/documentation/
+
+material de apoio:
+https://github.com/zup-academy/documentacao-cartao-branco/blob/master/informacao_procedural/kafka.md
 
 
 #### 3.1. pom.xml
@@ -249,7 +259,7 @@ public class RecebeTransacao {
 ```
 
 
-### Vault
+### 4.Vault
 
 Documentação: https://www.vaultproject.io/docs
 
@@ -318,7 +328,7 @@ spring.datasource.password=${DB_PASSWORD}
 Pronto, agora o Vault já está funcionando.
 
 
-### Jaeger
+### 5.Jaeger
 
 referência material de apoio:
 
@@ -338,7 +348,7 @@ opentracing.jaeger.udp-sender.port=${JAEGGER_PORT:5775}
 
 ```
 
-### Docker 
+### 6.Docker 
 
 Documentação: https://docs.docker.com/get-started/
 
@@ -369,11 +379,11 @@ ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
 > docker build -t bootcamp/proposta .
 
 
-### Kubernetes
+### 7.Kubernetes
 
 
 
-### Keycloak
+### 8.Keycloak
 
 Documentação: https://www.keycloak.org/documentation
 
@@ -436,7 +446,7 @@ localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
 ```
 
 
-### Open Api 3
+### 9.Open Api 3
 
 
 #### 9.1. pom.xml
@@ -464,13 +474,13 @@ springdoc.swagger-ui.path=/swagger-ui.html
 ```
 
 
-### Knative
+### 10.Knative
 
 
 - https://knative.dev/docs/serving/samples/hello-world/helloworld-java-spring/
 
 
-### Logs
+### 11.Logs
 
 
 ```
@@ -482,7 +492,7 @@ logger.info("Aviso devidamente registrado e pode ser identificado pelo número {
 
 ```
 
-### Envs
+### 12.Envs
 
 
 ```
@@ -495,7 +505,7 @@ proposta: valor default
 
 ```
 
-### Pitest
+### 13.Pitest
 
 
 Documentação: https://pitest.org/quickstart/maven/
@@ -521,7 +531,7 @@ Documentação: https://pitest.org/quickstart/maven/
 > mvn org.pitest:pitest-maven:mutationCoverage
 
 
-## Referências
+## 14.Referências
 
 
 - https://github.com/zup-academy/documentacao-cartao-branco
